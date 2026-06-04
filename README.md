@@ -1,6 +1,8 @@
 
 # THAVAN AI
 
+Live Demo: https://thavan-ai.vercel.app
+
 ### Street-smart financial co-pilot for small businesses
 
 **THAVAN AI** is an AI-powered financial decision intelligence platform that helps small businesses predict cash crunches before they happen, prioritize payments intelligently, and stay financially stable with confidence.
