@@ -12,7 +12,7 @@ export const WhatIf = () => {
     if (!nlInput.trim()) return;
     setIsProcessingNL(true);
     try {
-      const res = await fetch('http://localhost:5001/api/ai/whatif-nl', {
+      const res = await fetch('https://thavanai-backend.onrender.com/api/ai/whatif-nl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: nlInput, currentParams: params })
@@ -36,7 +36,7 @@ export const WhatIf = () => {
   }
 
   useEffect(() => {
-    fetch('http://localhost:5001/api/dashboard/whatif', {
+    fetch('https://thavanai-backend.onrender.com/api/dashboard/whatif', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(params)

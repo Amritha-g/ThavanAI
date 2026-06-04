@@ -11,7 +11,7 @@ export const EmailModal = ({ isOpen, onClose, obId, recName, recAmount }: any) =
     if (isOpen) {
       setEmailText('');
       setTyping(true);
-      fetch('http://localhost:5001/api/ai/draft-email', {
+      fetch('https://thavanai-backend.onrender.com/api/ai/draft-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ obId, recName, recAmount })

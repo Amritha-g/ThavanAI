@@ -8,7 +8,7 @@ export const Loans = () => {
 
   const handleAdd = async () => {
     if (!formData.lender || !formData.total) return alert('Name and Amount required');
-    await fetch('http://localhost:5001/api/loans', {
+    await fetch('https://thavanai-backend.onrender.com/api/loans', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)

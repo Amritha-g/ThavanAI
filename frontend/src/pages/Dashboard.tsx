@@ -15,7 +15,7 @@ export const Dashboard = ({ navigate }: { navigate: (page: string) => void }) =>
   const [alerts, setAlerts] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:5001/api/alerts')
+    fetch('https://thavanai-backend.onrender.com/api/alerts')
       .then(res => res.json())
       .then(data => setAlerts(Array.isArray(data) ? data : []))
       .catch(err => console.error("Failed to fetch alerts", err));

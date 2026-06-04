@@ -24,7 +24,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
   const fetchData = async () => {
     try {
-      const res = await fetch('http://localhost:5001/api/dashboard');
+      const res = await fetch('https://thavanai-backend.onrender.com/api/dashboard');
       if (!res.ok) return;
       const data = await res.json();
       setDashboardState(data.dashboardState);

@@ -10,7 +10,7 @@ export const Receivables = () => {
 
   const handleAdd = async () => {
     if (!formData.name || !formData.amount) return alert('Name and Amount required');
-    await fetch('http://localhost:5001/api/receivables', {
+    await fetch('https://thavanai-backend.onrender.com/api/receivables', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...formData, amount: Number(formData.amount), confidence: Number(formData.confidence) })

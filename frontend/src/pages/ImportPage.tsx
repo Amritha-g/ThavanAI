@@ -6,7 +6,7 @@ export const ImportPage = () => {
 
   const fetchTx = async () => {
     try {
-      const r = await fetch('http://localhost:5001/api/transactions');
+      const r = await fetch('https://thavanai-backend.onrender.com/api/transactions');
       setTransactions(await r.json());
     } catch (e) { console.error(e); }
   };
@@ -15,7 +15,7 @@ export const ImportPage = () => {
 
   const handleManual = async () => {
     if (!manual.desc || !manual.amount) return alert('Desc and amount required');
-    await fetch('http://localhost:5001/api/transactions/manual', {
+    await fetch('https://thavanai-backend.onrender.com/api/transactions/manual', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(manual)
     });
@@ -30,7 +30,7 @@ export const ImportPage = () => {
         const formData = new FormData();
         formData.append('file', file);
 
-        const r = await fetch('http://localhost:5001/api/transactions/parse', {
+        const r = await fetch('https://thavanai-backend.onrender.com/api/transactions/parse', {
           method: 'POST',
           body: formData
         });

@@ -10,7 +10,7 @@ export const Obligations = () => {
 
   const handleAdd = async () => {
     if (!formData.name || !formData.amount) return alert('Name and Amount required');
-    await fetch('http://localhost:5001/api/obligations', {
+    await fetch('https://thavanai-backend.onrender.com/api/obligations', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...formData, amount: Number(formData.amount) })
